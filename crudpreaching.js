@@ -36,28 +36,52 @@ $(document).ready(function(){
 	});
 	/* Data Delete Ends Here */
 	
-	/* Get Edit ID  */
-	$(".edit-link").click(function()
-	{
-		var id = $(this).attr("id");
-		var edit_id = id;
+	// /* Get Edit ID  */
+	// $(".edit-link").click(function()
+	// {
+	// 	var id = $(this).attr("id");
+	// 	var edit_id = id;
+    //
+	// 	console.log(edit_id);
+    //
+    //
+	//
+	// 	if(confirm('Sure to Edit ID No = ' +edit_id))
+	// 	{
+	// 		$(".content-loader").fadeOut('slow', function()
+	// 		 {
+	// 			$(".content-loader").fadeIn('slow');
+	// 			$(".content-loader").load('edit_formpreaching.php?edit_id='+edit_id);
+	// 			$("#btn-add").hide();
+	// 			$("#btn-view").show();
+	// 		});
+	// 	}
+	// 	return false;
+	// });
 
-		console.log(edit_id);
-
-
-		
-		if(confirm('Sure to Edit ID No = ' +edit_id))
-		{
-			$(".content-loader").fadeOut('slow', function()
-			 {
-				$(".content-loader").fadeIn('slow');
-				$(".content-loader").load('edit_formpreaching.php?edit_id='+edit_id);
-				$("#btn-add").hide();
-				$("#btn-view").show();
-			});
-		}
-		return false;
+	$('.edit-link').on('click',function (e) {
+		e.preventDefault();
+		//I have fetched the parameters from the datatable by traversing the dom elements.
+        var preacherId = event.target.parentNode.parentNode.parentNode.children[0].textContent;
+        var title = event.target.parentNode.parentNode.parentNode.children[1].textContent;
+        var preachedOn = event.target.parentNode.parentNode.parentNode.children[2].textContent;
+        var preachBy = event.target.parentNode.parentNode.parentNode.children[3].textContent;
+		//Adding the parameters to the inputs.
+        $('#preacherId').val(preacherId);
+        $('#preachedOn').val(preachedOn);
+        $('#preachedBy').val(preachBy);
+		//Displaying the modal with the parameters
+		$('#cira').modal();
 	});
+	//This button can be used to perform an ajax call.
+
+    $('#btnPreachingUpdate').on('click', function (e) {
+        e.preventDefault();
+        $('#cira').modal('hide');
+		//you can write your ajax code here.
+    });
+
+
 	/* Get Edit ID  */
 	
 	// /* Update Record  */

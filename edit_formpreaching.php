@@ -46,7 +46,7 @@ $id = $_GET['edit_id'];
          
         <tr>
             <td colspan="4">
-            <button type="button" class="btn btn-primary" name="btn-update" id="btn-update" value="btn-update">
+            <button type="button" class="btn btn-primary" name="btn-update" id="btn-update">
     		<span class="glyphicon glyphicon-plus"></span>Edit
 			</button>
             </td>
@@ -54,4 +54,4 @@ $id = $_GET['edit_id'];
  
     </table>
 </form>
-     
+

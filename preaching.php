@@ -1,4 +1,3 @@
-
 <html>
 <head>
     <meta charset="utf-8">
@@ -8,45 +7,40 @@
     <!-- Tell the browser to be responsive to screen width -->
 
 
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" media="screen"> 
-<link href="assets/datatables.min.css" rel="stylesheet" type="text/css">
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<script type="text/javascript" src="assets/jquery-1.11.3-jquery.min.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+    <link href="assets/datatables.min.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <script type="text/javascript" src="assets/jquery-1.11.3-jquery.min.js"></script>
 
-<script type="text/javascript">
-$(document).ready(function(){
-    
-    $("#btn-view").hide();
-    
-    $("#btn-add").click(function(){
-        $(".content-loader").fadeOut('slow', function()
-        {
-            $(".content-loader").fadeIn('slow');
-            $(".content-loader").load('add_form.php');
-            $("#btn-add").hide();
-            $("#btn-view").show();
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#btn-view").hide();
+
+            $("#btn-add").click(function () {
+                $(".content-loader").fadeOut('slow', function () {
+                    $(".content-loader").fadeIn('slow');
+                    $(".content-loader").load('add_form.php');
+                    $("#btn-add").hide();
+                    $("#btn-view").show();
+                });
+            });
+
+            $("#btn-view").click(function () {
+
+                $("body").fadeOut('slow', function () {
+                    $("body").load('preaching.php');
+                    $("body").fadeIn('slow');
+                    window.location.href = "preaching.php";
+                });
+            });
+
         });
-    });
-    
-    $("#btn-view").click(function(){
-        
-        $("body").fadeOut('slow', function()
-        {
-            $("body").load('preaching.php');
-            $("body").fadeIn('slow');
-            window.location.href="preaching.php";
-        });
-    });
-    
-});
-</script>
+    </script>
 
 
-
-
-
-    
     <!-- Bootstrap 3.3.6 -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -76,8 +70,8 @@ $(document).ready(function(){
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"  />
-    <link rel="stylesheet" href="style.css" type="text/css"  />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
     <![endif]-->
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -101,13 +95,13 @@ $(document).ready(function(){
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
                     <!-- Messages: style can be found in dropdown.less-->
-                    
+
                     <!-- Notifications: style can be found in 
                     <!-- Tasks: style can be found in dropdown.less -->
-                    
+
                     <!-- User Account: style can be found in dropdown.less -->
-                   
-                    
+
+
                 </ul>
             </div>
         </nav>
@@ -119,10 +113,10 @@ $(document).ready(function(){
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="jlogo.png" class="img-circle" alt="User Image">
+<!--                    <img src="jlogo.png" class="img-circle" alt="User Image">-->
                 </div>
                 <div class="pull-left info">
-<!--                    <p>  --><?php //print($userRow['user_email']); ?><!--</p>-->
+                    <!--                    <p>  --><?php //print($userRow['user_email']); ?><!--</p>-->
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
@@ -158,7 +152,7 @@ $(document).ready(function(){
               <i class="#"></i>
             </span>
                     </a>
-                  
+
                 </li>
                 <li class=" treeview">
                     <a href="#">
@@ -170,13 +164,13 @@ $(document).ready(function(){
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="event.php"><i class="fa fa-circle-o"></i>Event</a></li>
-                        
-                   
+
+
                     </ul>
                     <ul class="treeview-menu">
                         <li><a href="#"><i class="fa fa-circle-o"></i>Event Goers</a></li>
-                        
-                   
+
+
                     </ul>
                 </li>
                 <li class="treeview">
@@ -188,27 +182,27 @@ $(document).ready(function(){
                     </a>   </a>
                     <ul class="treeview-menu">
                         <li><a href="#"><i class="fa fa-circle-o"></i>Group Members</a></li>
-                   
-                  
+
+
                     </ul>
                 </li>
-                     <li class="treeview">
+                <li class="treeview">
                     <a href="prayer.php">
                         <i class="fa fa-edit"></i> <span>Prayers</span>
                         <span class="pull-right-container">
               <i class="#"></i>
             </span>
                     </a>   </a>
-                    
+
                 </li>
-                     <li class="active treeview">
+                <li class="active treeview">
                     <a href="preaching.php">
                         <i class="fa fa-edit"></i> <span>Preaching</span>
                         <span class="pull-right-container">
               <i class="#"></i>
             </span>
                     </a>   </a>
-                    
+
                 </li>
                 <li class="treeview">
                     <a href="#">
@@ -217,9 +211,9 @@ $(document).ready(function(){
               <i class="#"></i>
             </span>
                     </a>   </a>
-                    
+
                 </li>
-                 <li class="treeview">
+                <li class="treeview">
                     <a href="#">
                         <i class="fa fa-edit"></i> <span>Testimonies</span>
                         <span class="pull-right-container">
@@ -228,10 +222,10 @@ $(document).ready(function(){
                     </a>   </a>
                     <ul class="treeview-menu">
                         <li><a href="#"><i class="fa fa-circle-o"></i>Testimony Likers</a></li>
-                   
-                  
+
+
                     </ul>
-                    
+
                 </li>
 
 
@@ -253,226 +247,210 @@ $(document).ready(function(){
             </ol>
             <br>
 
-<!-- new event button -->
-                 
-<p align="right">
+            <!-- new event button -->
 
-                        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal" name="btn-update" id="btn-update">NEW PREACHING</button></p>
+            <p align="right">
+
+                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal" name="btn-update" id="btn-update">NEW PREACHING</button>
+            </p>
 
 
- <!--end of  new event button-->
-         
-                    <div class="container">
-                          
-                            <h2 class="form-signin-heading"></h2><hr />
-                           
-                            <hr />
-                            
-                            <div class="content-loader">
-                            
-                            <table cellspacing="0" id="example" class="table table-bordered table-hover table-responsive">
-                            <thead>
-                            <tr>
+            <!--end of  new event button-->
+
+            <div class="container">
+
+                <h2 class="form-signin-heading"></h2>
+                <hr/>
+
+                <hr/>
+
+                <div class="content-loader">
+
+                    <table cellspacing="0" id="example" class="table table-bordered table-hover table-responsive">
+                        <thead>
+                        <tr>
                             <th>Id</th>
                             <th>Title</th>
                             <th>Preached On</th>
                             <th>By</th>
                             <th>Streams</th>
-                            <th>Downloads</th> 
-                            <th>likes</th>                            
+                            <th>Downloads</th>
+                            <th>likes</th>
                             <th>Edit</th>
                             <th>Delete</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <?php
-                            include_once 'dbConfig.php';
-                            $stmt = $dbh->prepare("SELECT * FROM Preachings ORDER BY preaching_id DESC");
-                            $stmt->execute();
-                            while($row=$stmt->fetch(PDO::FETCH_ASSOC))
-                            {
-                                ?>
-                                <tr>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        include_once 'dbConfig.php';
+                        $stmt = $dbh->prepare("SELECT * FROM Preachings ORDER BY preaching_id DESC");
+                        $stmt->execute();
+                        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                            ?>
+                            <tr>
                                 <td><?php echo $row['preaching_id']; ?></td>
                                 <td><?php echo $row['title']; ?></td>
                                 <td><?php echo $row['preached_on']; ?></td>
                                 <td><?php echo $row['by']; ?></td>
-                                <td><?php echo $row['streams']; ?></td>                                
+                                <td><?php echo $row['streams']; ?></td>
                                 <td><?php echo $row['downloads']; ?></td>
                                 <td><?php echo $row['likes']; ?></td>
-                            
+
                                 <td align="center">
-                                <a id="<?php echo $row['preaching_id']; ?>" class="edit-link" href="#" data-toggle="modal" data-target="#cira" title="Edit">
-                                <img src="edit.png" width="20px" />
-                                </a></td>
+                                    <a data-preaching-id="<?php echo $row['preaching_id']; ?>" class="edit-link" href="#"  title="Edit" id="preaching_id">
+                                        <img src="edit.png" width="20px"/>
+                                    </a></td>
                                 <td align="center"><a id="<?php echo $row['preaching_id']; ?>" class="delete-link" href="#" title="Delete">
-                                <img src="delete.png" width="20px" />
-                                </a></td>
+                                        <img src="delete.png" width="20px"/>
+                                    </a></td>
+                            </tr>
+                            <?php
+                        }
+                        ?>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!--modal pop up-->
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">PREACHING DETAILS</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action='preachingadd.php' method='post' enctype="multipart/form-data">
+
+                            <table class='table table-bordered table-responsive'>
+
+                                <tr>
+                                    <td>Title</td>
+                                    <td><input type='file' name='title' class='form-control' required></td>
                                 </tr>
-                                <?php
-                            }
-                            ?>
-                            </tbody>
+
+                                <tr>
+                                    <td>Preached On</td>
+                                    <td><input type='text' name='preached' class='form-control' required></td>
+                                </tr>
+                                <tr>
+                                    <td>By</td>
+                                    <td><input type='text' name='by' class='form-control' required></td>
+                                </tr>
+                                <!--  <tr>
+                                      <td>Streams</td>
+                                      <td><input type='text' name='streams' class='form-control'  required></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Description</td>
+                                      <td><input type='text' name='des' class='form-control'  required></td>
+                                  </tr>
+                                   <tr>
+                                      <td>Time</td>
+                                      <td><input type='text' name='time' class='form-control'  required></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Eposter</td>
+                                      <td><input type='text' name='eposter' class='form-control'  required></td>
+                                  </tr>-->
+
+
+                                <tr>
+                                    <td colspan="4">
+                                        <button type="submit" class="btn btn-info btn-block" name="btn-update" id="btn-update">
+                                            ADD
+                                        </button>
+                                    </td>
+                                </tr>
+
                             </table>
-                            
-                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- end of the pop up input form for the new details -->
+        <!--end of modal pop up-->
+        <!--modal pop up-->
+        <!-- Modal -->
+        <div class="modal fade" id="cira" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">PREACHING DETAILS</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <style type="text/css">
+                            #dis {
+                                display: none;
+                            }
+                        </style>
+
+
+                        <div id="dis">
 
                         </div>
-                        
-        </section>
-<!--modal pop up-->
-<!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">PREACHING DETAILS</h4>
+
+
+                        <form method='post' id='emp-UpdateForm' action='' enctype="multipart/form-data">
+
+                            <table class='table table-bordered table-responsive'>
+                                <input type='hidden' name='preacherId' id="preacherId" />
+                                <tr>
+                                    <td>Title</td>
+                                    <td><input type='file' name='title' id="title" class='form-control'  required></td>
+                                    <td><span id="preachingTitle" name="preachingTitle"></span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Preached On</td>
+                                    <td><input type='text' name='preachedOn' id="preachedOn" class='form-control'  required></td>
+                                </tr>
+                                <tr>
+                                    <td>By</td>
+                                    <td><input type='text' name='preachedBy' id='preachedBy' class='form-control'  required></td>
+                                </tr>
+
+
+                                <tr>
+                                    <td colspan="4">
+                                        <button type="button" class="btn btn-primary" name="btnPreachingUpdate" id="btnPreachingUpdate" value="btn-update">
+                                            <span class="glyphicon glyphicon-plus"></span>Submit Details
+                                        </button>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </form>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="modal-body">
-        <form action='preachingadd.php' method='post' enctype="multipart/form-data">
- 
-    <table class='table table-bordered table-responsive'>
-       
-        <tr>
-            <td>Title</td>
-            <td><input type='file' name='title' class='form-control'  required></td>
-        </tr>
- 
-        <tr>
-            <td>Preached On</td>
-            <td><input type='text' name='preached' class='form-control'  required></td>
-        </tr>
-        <tr>
-            <td>By</td>
-            <td><input type='text' name='by' class='form-control'  required></td>
-        </tr>
-      <!--  <tr>
-            <td>Streams</td>
-            <td><input type='text' name='streams' class='form-control'  required></td>
-        </tr>
-        <tr>
-            <td>Description</td>
-            <td><input type='text' name='des' class='form-control'  required></td>
-        </tr>
-         <tr>
-            <td>Time</td>
-            <td><input type='text' name='time' class='form-control'  required></td>
-        </tr>
-        <tr>
-            <td>Eposter</td>
-            <td><input type='text' name='eposter' class='form-control'  required></td>
-        </tr>-->
- 
- 
-    
- 
-        <tr>
-            <td colspan="4">
-            <button type="submit" class="btn btn-info btn-block" name="btn-update" id="btn-update">
-            ADD
-            </button>
-            </td>
-        </tr>
- 
-    </table>
-</form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  
-        <!-- end of the pop up input form for the new details -->   
-            <!--end of modal pop up-->
-<!--modal pop up-->
-<!-- Modal -->
-  <div class="modal fade" id="cira" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">PREACHING DETAILS</h4>
-        </div>
-        <div class="modal-body">
-        <?php
 
-include 'dbConfig.php';
- 
-if($_GET['preaching_id'])
-{
-$id = $_GET['preaching_id']; 
-     $stmt=$dbh->prepare("SELECT * FROM preachings WHERE preaching_id=:preaching_id");
-    $stmt->execute(array('preaching_id'=>$id)); 
-    $row=$stmt->fetch(PDO::FETCH_ASSOC);
-}
-
-die($row);
-
-?>
-<style type="text/css">
-#dis{
-    display:none;
-}
-</style>
-
-
-    
-    
-    <div id="dis">
-    
-    </div>
-        
-    
-     <form method='post' id='emp-UpdateForm' action='' enctype="multipart/form-data">
- 
-    <table class='table table-bordered table-responsive'>
-        <input type='hidden' name='id' value='<?php echo $row['preaching_id']; ?>' />
-        <tr>
-            <td>Title</td>
-            <td><input type='file' name='title' class='form-control' value='<?php echo $row['title']; ?>' required></td>
-        </tr>
- 
-        <tr>
-            <td>Preached On</td>
-            <td><input type='text' name='preached_on' class='form-control' value='<?php echo $row['preached_on']; ?>' required></td>
-        </tr>
-        <tr>
-            <td>By</td>
-            <td><input type='text' name='by' class='form-control' value='<?php echo $row['by']; ?>' required></td>
-        </tr>
-
-         
-        <tr>
-            <td colspan="4">
-            <button type="submit" class="btn btn-primary" name="btn-update" id="btn-update" value="btn-update">
-            <span class="glyphicon glyphicon-plus"></span>Edit
-            </button>
-            </td>
-        </tr>
- 
-    </table>
-</form>
-     
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  
-        <!-- end of the pop up input form for the new details -->   
-            <!--end of modal pop up-->
+        <!-- end of the pop up input form for the new details -->
+        <!--end of modal pop up-->
 
 
         <!-- jQuery 2.2.3 -->
@@ -486,24 +464,20 @@ die($row);
         <!-- Bootstrap 3.3.6 -->
 
 
-                <script src="bootstrap/js/bootstrap.min.js"></script>
-                <script type="text/javascript" src="assets/datatables.min.js"></script>
-                
-                <script type="text/javascript" src="crudpreaching.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/datatables.min.js"></script>
 
-                <script type="text/javascript" charset="utf-8">
-                $(document).ready(function() {
-                    $('#example').DataTable();
+        <script type="text/javascript" src="crudpreaching.js"></script>
 
-                    $('#example')
-                    .removeClass( 'display' )
+        <script type="text/javascript" charset="utf-8">
+            $(document).ready(function () {
+                $('#example').DataTable();
+
+                $('#example')
+                    .removeClass('display')
                     .addClass('table table-bordered');
-                });
-                </script>
-
-
-
-
+            });
+        </script>
 
 
         <!-- <script src="bootstrap/js/bootstrap.min.js"></script>
