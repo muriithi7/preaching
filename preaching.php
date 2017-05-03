@@ -333,7 +333,7 @@
 
                                 <tr>
                                     <td>Title</td>
-                                    <td><input type='file' name='title' class='form-control' required></td>
+                                    <td><input type='file' name='title' class='form-control' required size="500000"></td>
                                 </tr>
 
                                 <tr>
@@ -408,7 +408,7 @@
                         </div>
 
 
-                        <form method='post' id='emp-UpdateForm' action='' enctype="multipart/form-data">
+                        <form method='post' id='emp-UpdateForm' action='updatepreaching.php' enctype="multipart/form-data">
 
                             <table class='table table-bordered table-responsive'>
                                 <input type='hidden' name='preacherId' id="preacherId" />

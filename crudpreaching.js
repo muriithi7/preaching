@@ -77,7 +77,45 @@ $(document).ready(function(){
 
     $('#btnPreachingUpdate').on('click', function (e) {
         e.preventDefault();
-        $('#cira').modal('hide');
+		var preacherId = $('#preacherId').val();
+        var title = $('#title')[0].files[0];
+        var preachedOn = $('#preachedOn').val();
+        var preachedBy =$('#preachedBy').val();
+
+           
+           // console.log(title);     
+     var form_data = new FormData();                  // Creating object of FormData class
+    form_data.append("title", title)      ;        // Appending parameter named file with properties of file_field to form_data
+    form_data.append("preacherId", preacherId)   ;    
+    form_data.append("preachedBy", preachedBy)   ;    
+    form_data.append("preachedOn", preachedOn)  ;
+
+console.log(JSON.stringify(form_data));
+
+$.ajax({
+        url: "updatepreaching.php",
+        type: "POST",
+        data: form_data,
+        processData: false,
+		contentType: false, // add a flag
+        success: function(data, textStatus, jqXHR){
+           alert(data);
+           //Also remove the above. alert/
+          //put an if statement to close the modal if successful
+
+          //if(response condition){
+			//$('#cira').modal('hide');
+          	//}
+                   },
+        error: function (jqXHR, textStatus, errorThrown){
+            alert('Error!');
+        }
+    });
+
+
+        //$('#cira').modal('hide');
+        //
+        //window.location.href="updatepreaching.php";
 		//you can write your ajax code here.
     });
 

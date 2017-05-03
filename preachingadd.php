@@ -12,8 +12,8 @@ require_once 'dbConfig.php';
 		//$streams = $_POST['streams'];
 
 		$name = $_FILES["title"]["name"];
-       //$size = $_FILES['file']['size']
-        //$type = $_FILES['file']['type']
+     	$size = $_FILES['title']['size'];
+       	$type = $_FILES['title']['type'];
 
          $tmp_name = $_FILES['title']['tmp_name'];
         $error = $_FILES['title']['error'];
